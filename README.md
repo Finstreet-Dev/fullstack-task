@@ -28,30 +28,6 @@ This is a Node.js backend assessment task where you are required to develop a RE
 ### Authentication (Optional)
 - Implement a simple JWT-based authentication system to protect the API endpoints.
 
-## Sample Code
-Here's an example of setting up an Express server and a route:
-
-```javascript
-const express = require('express');
-const app = express();
-app.use(express.json());
-
-// MongoDB setup and Task model should be here
-
-app.get('/tasks', async (req, res) => {
-    try {
-        const tasks = await Task.find({});
-        res.status(200).json(tasks);
-    } catch (error) {
-        res.status(500).json({ message: 'Error fetching tasks' });
-    }
-});
-
-// More routes for POST, PUT, GET by ID, and DELETE
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-```
 
 ## Evaluation Criteria
 - **Functionality**: The API should meet all the specified requirements.
