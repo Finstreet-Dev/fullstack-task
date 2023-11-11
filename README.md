@@ -28,6 +28,30 @@ This is a Node.js backend assessment task where you are required to develop a RE
 ### Authentication (Optional)
 - Implement a simple JWT-based authentication system to protect the API endpoints.
 
+## Sample Code
+Here's an example of setting up an Express server and a route:
+
+```javascript
+const express = require('express');
+const app = express();
+app.use(express.json());
+
+// MongoDB setup and Task model should be here
+
+app.get('/tasks', async (req, res) => {
+    try {
+        const tasks = await Task.find({});
+        res.status(200).json(tasks);
+    } catch (error) {
+        res.status(500).json({ message: 'Error fetching tasks' });
+    }
+});
+
+// More routes for POST, PUT, GET by ID, and DELETE
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+```
 
 ## Evaluation Criteria
 - **Functionality**: The API should meet all the specified requirements.
@@ -39,3 +63,29 @@ This is a Node.js backend assessment task where you are required to develop a RE
 - Provide the source code via a GitHub repository.
 - Include a README file with these instructions.
 - Document any third-party libraries used.
+
+## Additional Frontend Task: React Hero Section with Animated Cards
+
+### Overview
+This task involves creating a hero section with three animated cards in React, based on a provided prototype. The goal is to replicate the design and animations as closely as possible.
+
+### Prototype Reference
+- Prototype Link: [Bugatti Cars Prototype](https://www.figma.com/proto/dCpIoeMGgjSVW0cLJwRfQc/Bugatti-Cars?page-id=0%3A1&type=design&node-id=28-221&viewport=190%2C283%2C0.08&t=2sU0hUqodTgPkH5q-1&scaling=scale-down&starting-point-node-id=28%3A221&mode=design)
+- Instructions: Press “Space” to start the “Prototype”, “Next” to switch between the slides, and the “Menu Icon” on the top left to check the menu. Press “R” to restart.
+
+### Task Requirements
+- **React Implementation**: Develop the hero section using React.
+- **Animation**: Implement animations for the cards as shown in the prototype.
+- **Menu Interaction**: Add functionality for the menu opening and closing with hover animation on the page names.
+- **Replicate Design**: Try to match the design in the prototype as closely as possible, including layout, colors, and fonts.
+
+### Evaluation Criteria
+- **Fidelity to Prototype**: The final implementation should closely resemble the prototype in design and animation.
+- **Code Quality**: The code should be clean, well-organized, and properly commented.
+- **Interactivity**: The animations and interactions should be smooth and user-friendly.
+- **React Best Practices**: Use of React best practices for state management and component structure.
+
+### Submission Guidelines
+- Provide the source code via a GitHub repository alongside the backend task.
+- Include a separate README or section in the existing README with instructions on how to set up and run the React application.
+- Document any third-party libraries used for animations or UI components.
