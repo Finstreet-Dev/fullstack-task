@@ -4,6 +4,19 @@
 ## Overview
 This is a Node.js backend assessment task where you are required to develop a RESTful API for a task management system. The API will allow users to create, read, update, and delete tasks.
 
+### Third-Party Libraries Used
+- `express`: Web application framework for Node.js.
+- `express-async-handler`: Utility for handling asynchronous exceptions in Express.
+- `body-parser`: Middleware to parse incoming request bodies in a middleware before handlers.
+- `cors`: Middleware for enabling Cross-Origin Resource Sharing.
+- `bcrypt`: A library for hashing passwords.
+- `jsonwebtoken`: A library for creating and verifying JSON Web Tokens (JWT).
+- `mongoose`: An ODM (Object Data Modeling) library for MongoDB and Node.js.
+- `morgan`: HTTP request logger middleware for Node.js.
+- `dotenv`:  Loads environment variables from a .env file.
+- `fs`: File system module for Node.js.
+- `nodemon`: A tool for automatically restarting the Node.js application when file changes are detected.
+
 ## Models
 
 ### User Model
