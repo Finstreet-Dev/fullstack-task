@@ -21,9 +21,8 @@ const taskSchema = new mongoose.Schema({
         required: [true, "Please enter the priority"]
     },
     status: {
-        type: Boolean,
-        default: true,
-        required: [true, "Please enter the status"]
+        type: String,
+        default: "Pending"
     }
 })
 
