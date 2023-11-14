@@ -27,20 +27,21 @@ const MenuModal = ({ handleCloseMenuModal, handleOpenMenuModal }) => {
                 aria-describedby="modal-modal-description"
             >
                 <Paper>
-                    <Box className={classes.modalContainer}>
+                    <Box className={classes.modalContainer} component="section">
                         <CloseIcon sx={{ color: "white", fontSize: "35px", cursor: "pointer" }} onClick={handleCloseMenuModal} />
-                        <Box className={classes.modalContainerMenu}>
+                        <Box className={classes.modalContainerMenu} component="section">
                             {Object.keys(menuData).map((item, index) => (
                                 <Box
                                     key={index}
                                     className={classes.modalContainerMenuItem}
                                     onMouseEnter={() => setHoveredMenuItem(item)}
                                     onMouseLeave={() => setHoveredMenuItem(null)}
+                                    component="article"
                                 >
                                     {item}
 
                                     {hoveredMenuItem === item && (
-                                        <Box sx={{display:"flex", alignItems:"center"}}>
+                                        <Box sx={{display:"flex", alignItems:"center"}} component="article">
                                             {menuData[item].map((info, infoIndex) => (
                                                 <Typography sx={{paddingLeft:"1em", fontSize:"12px"}} key={infoIndex} >{info}</Typography>
                                             ))}

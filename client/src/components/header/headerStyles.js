@@ -11,12 +11,6 @@ export const useStyles = makeStyles({
     },
     menuSection: {
         cursor:"pointer"
-    },
-
-    logoSection: {
-    },
-
-    languageSection: {
     }
 
 });

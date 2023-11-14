@@ -12,13 +12,6 @@ export const useStyles = makeStyles({
     menuSection: {
         cursor: "pointer"
     },
-
-    logoSection: {
-    },
-
-    languageSection: {
-    },
-
     modalContainerMenu: {
         marginTop: "4em"
     },
@@ -28,7 +21,7 @@ export const useStyles = makeStyles({
         fontWeight: 800,
         fontSize: "27px",
         cursor: "pointer",
-        display:"flex"
+        display: "flex"
     }
 
 });
